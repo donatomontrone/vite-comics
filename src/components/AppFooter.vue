@@ -3,7 +3,7 @@
         <div class="wrapper">
             <ul>
                 <li v-for="item in blueButtonsList">
-                    <img :src="'../assets/img/buy-' + item.img" :alt="item.text">
+                    <img :src="`src/assets/img/buy-${item.img}`" :alt="item.text">
                     <p>{{ item.text.toUpperCase() }}</p>
                 </li>
             </ul>
@@ -108,16 +108,26 @@ export default {
 </script>
 <style lang="scss" scoped>
 section.blue-buttons {
-    height: 110px;
     background-color: #267cec;
 
     ul {
         list-style: none;
         display: flex;
+        height: 100%;
         color: white;
 
         li {
             display: flex;
+            justify-content: space-between;
+            padding: 1.5rem;
+            font-size: .8rem;
+            align-items: center;
+
+            img {
+                width: 35px;
+                margin-right: .5rem;
+
+            }
         }
     }
 }
