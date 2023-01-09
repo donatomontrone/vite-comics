@@ -1,6 +1,8 @@
 <template>
     <div class="wrapper">
-        <h3> --> Content goes here </h3>
+        <section class="main-content">
+            <h3> --> Content goes here </h3>
+        </section>
     </div>
 </template>
 <script>
@@ -11,6 +13,6 @@ export default {
 <style lang="scss" scoped>
 h3 {
     color: white;
-    padding: 2rem 0;
+    padding: 2.5rem 0;
 }
 </style>

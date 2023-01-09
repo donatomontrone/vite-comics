@@ -66,7 +66,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 div.container {
-    margin-top: 2rem;
+    margin-top: 4rem;
     background-color: white;
 
     div.wrapper {
@@ -76,8 +76,8 @@ div.container {
     }
 
     div.main-logo img {
-        width: 50px;
-        padding: .5rem 0;
+        width: 60px;
+        padding: .8rem 0;
     }
 
     ul {
@@ -85,13 +85,14 @@ div.container {
 
         li {
             display: inline;
-            padding: 1.6rem .7rem;
-            font-size: .5rem;
+            padding: 2.1rem 0;
+            margin: 0 .7rem;
+            font-size: .65rem;
             font-weight: bold;
 
             &.active {
                 color: #267CEC;
-                border-bottom: 3px solid #267CEC;
+                border-bottom: 4px solid #267CEC;
             }
         }
     }
