@@ -90,7 +90,7 @@ header {
         li {
             display: inline-block;
             margin: 0 .7rem;
-            font-size: .65rem;
+            font-size: .9rem;
             line-height: 90px;
             font-weight: bold;
 
