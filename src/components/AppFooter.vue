@@ -1,176 +1,115 @@
 <template>
-    <section class="blue-buttons">
-        <div class="wrapper">
-            <ul>
-                <li v-for="item in blueButtonsList">
-                    <img :src="`src/assets/img/buy-${item.img}`" :alt="item.text">
-                    <p>{{ item.text.toUpperCase() }}</p>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <section class="footer-top">
-        <div class="wrapper">
-            <nav>
-                <ul>
-                    <li>
-                        <h5>DC COMICS</h5>
-                    </li>
-                    <li>Charters</li>
-                    <li>Comics</li>
-                    <li>Movies</li>
-                    <li>TV</li>
-                    <li>Games</li>
-                    <li>Videos</li>
-                    <li>News</li>
-                    <li>
-                        <h5>SHOP</h5>
-                    </li>
-                    <li>Shop DC</li>
-                    <li>Shop DC Collectibles</li>
-                </ul>
-                <ul>
-                    <li>
-                        <h5>DC</h5>
-                    </li>
-                    <li>Term Of Use</li>
-                    <li>Privacy Policy (New)</li>
-                    <li>Ad Choices</li>
-                    <li>Advertising</li>
-                    <li>Jobs</li>
-                    <li>Subscriptions</li>
-                    <li>Talent Workshops</li>
-                    <li>CPSC Certificates</li>
-                    <li>Ratings</li>
-                    <li>Shop Help</li>
-                    <li>Contact Us</li>
-                </ul>
-                <ul>
-                    <li>
-                        <h5>SITES</h5>
-                    </li>
-                    <li>DC</li>
-                    <li>MAD Magazine</li>
-                    <li>DC Kids</li>
-                    <li>DC Universe</li>
-                    <li>DC Power Visa</li>
-                </ul>
-            </nav>
-            <div class="logo-bg">
-                <img src="../assets/img/dc-logo-bg.png" alt="">
+    <footer>
+        <section class="footer-top dc-logo">
+            <div class="wrapper">
+                <nav>
+                    <ul>
+                        <li>
+                            <h5>DC COMICS</h5>
+                        </li>
+                        <li>Charters</li>
+                        <li>Comics</li>
+                        <li>Movies</li>
+                        <li>TV</li>
+                        <li>Games</li>
+                        <li>Videos</li>
+                        <li>News</li>
+                        <li>
+                            <h5>SHOP</h5>
+                        </li>
+                        <li>Shop DC</li>
+                        <li>Shop DC Collectibles</li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <h5>DC</h5>
+                        </li>
+                        <li>Term Of Use</li>
+                        <li>Privacy Policy (New)</li>
+                        <li>Ad Choices</li>
+                        <li>Advertising</li>
+                        <li>Jobs</li>
+                        <li>Subscriptions</li>
+                        <li>Talent Workshops</li>
+                        <li>CPSC Certificates</li>
+                        <li>Ratings</li>
+                        <li>Shop Help</li>
+                        <li>Contact Us</li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <h5>SITES</h5>
+                        </li>
+                        <li>DC</li>
+                        <li>MAD Magazine</li>
+                        <li>DC Kids</li>
+                        <li>DC Universe</li>
+                        <li>DC Power Visa</li>
+                    </ul>
+                </nav>
             </div>
-        </div>
-    </section>
-    <section class="footer-bottom">
-        <div class="wrapper">
-            <a href="#">SIGN-UP NOW!</a>
-            <div class="socials">
-                <h4>FOLLOW US</h4>
-                <a href="#" class=""><img src="../assets/img/footer-facebook.png" alt="Facebook"></a>
-                <a href="#" class=""><img src="../assets/img/footer-twitter.png" alt="Twitter"></a>
-                <a href="#" class=""><img src="../assets/img/footer-youtube.png" alt="YouTube"></a>
-                <a href="#" class=""><img src="../assets/img/footer-pinterest.png" alt="Pinterest"></a>
-                <a href="#" class=""><img src="../assets/img/footer-periscope.png" alt="Periscope"></a>
+        </section>
+        <section class="footer-bottom">
+            <div class="wrapper">
+                <a href="#">SIGN-UP NOW!</a>
+                <div class="socials">
+                    <h4>FOLLOW US</h4>
+                    <a href="#" class=""><img src="../assets/img/footer-facebook.png" alt="Facebook"></a>
+                    <a href="#" class=""><img src="../assets/img/footer-twitter.png" alt="Twitter"></a>
+                    <a href="#" class=""><img src="../assets/img/footer-youtube.png" alt="YouTube"></a>
+                    <a href="#" class=""><img src="../assets/img/footer-pinterest.png" alt="Pinterest"></a>
+                    <a href="#" class=""><img src="../assets/img/footer-periscope.png" alt="Periscope"></a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </footer>
 </template>
 <script>
-export default {
-    data() {
-        return {
-            blueButtonsList: [
-                {
-                    text: 'digital comics',
-                    img: "comics-digital-comics.png"
-                },
-                {
-                    text: 'dc merchandise',
-                    img: "comics-merchandise.png"
-                },
-                {
-                    text: 'subscription',
-                    img: "comics-subscriptions.png"
-                },
-                {
-                    text: 'comic shop locator',
-                    img: 'comics-shop-locator.png'
-                },
-                {
-                    text: 'dc power visa',
-                    img: "dc-power-visa.svg"
-                }
-            ],
-        }
-    }
-
-}
 </script>
 <style lang="scss" scoped>
-section.blue-buttons {
-    background-color: #267cec;
+@use '../styles/partials/variables.scss' as *;
 
-    ul {
-        list-style: none;
-        display: flex;
-        height: 100%;
-        color: white;
+footer {
+    background-color: $footer-bg-color;
+    background-image: url(../assets/img/footer-bg.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 
-        li {
-            display: flex;
-            justify-content: space-between;
-            padding: 1.5rem;
-            font-size: .8rem;
-            align-items: center;
-
-            img {
-                width: 35px;
-                margin-right: .5rem;
-
-            }
-        }
+    section.dc-logo {
+        background-image: url(../assets/img/dc-logo-bg.png);
+        background-position: right center;
+        background-size: initial;
+        background-repeat: no-repeat;
+        width: 90%;
+        margin-left: 22px;
+        padding-bottom: 30px;
     }
 }
 
-section.footer-top {
-    height: 280px;
-    background-image: url(../assets/img/footer-bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
 
-    div.wrapper {
-        display: flex;
-        justify-content: space-between;
-    }
+nav {
+    display: flex;
 
-
-    nav {
-        display: flex;
-
-        ul li {
-            font-size: .6rem;
-            list-style: none;
-            margin-right: .7rem;
-            padding: .1rem;
-            color: grey;
+    ul li {
+        font-size: .6rem;
+        list-style: none;
+        margin-right: .7rem;
+        padding: .1rem;
+        color: grey;
 
 
-            h5 {
-                font-size: .9rem;
-                margin: 1.5rem 0 .5rem 0;
-                color: white;
-            }
+        h5 {
+            font-size: .9rem;
+            margin: 1.5rem 0 .5rem 0;
+            color: $light-color;
         }
-    }
-
-    div.logo-bg img {
-        width: 370px;
     }
 }
 
 section.footer-bottom {
-    background-color: #303030;
-    position: relative;
+    background-color: $footer-bg-color;
     height: 90px;
 
     div.wrapper {
@@ -181,11 +120,11 @@ section.footer-bottom {
 
         &>a {
             text-decoration: none;
-            color: white;
+            color: $light-color;
             font-weight: bold;
             font-size: .8rem;
             padding: .6rem;
-            border: 2px solid #267cec
+            border: 2px solid $main-color
         }
 
         div.socials {
@@ -193,7 +132,7 @@ section.footer-bottom {
             align-items: center;
 
             h4 {
-                color: #267cec;
+                color: $main-color;
                 padding-right: 1rem;
             }
 

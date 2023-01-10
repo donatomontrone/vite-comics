@@ -1,17 +1,17 @@
 <template>
-    <div class="container">
+    <header>
         <div class="wrapper">
-            <div class="main-logo">
-                <img src="../assets/img/dc-logo.png" alt="DC Comics Main Logo">
-            </div>
             <nav>
+                <div class="main-logo">
+                    <img src="../assets/img/dc-logo.png" alt="DC Comics Main Logo">
+                </div>
                 <ul>
                     <li v-for="item in navItems" :class="(item.active) ? 'active' : ''">{{ item.text.toUpperCase() }}
                     </li>
                 </ul>
             </nav>
         </div>
-    </div>
+    </header>
 </template>
 <script>
 export default {
@@ -65,34 +65,38 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-div.container {
-    margin-top: 4rem;
-    background-color: white;
+@use '../styles/partials/variables.scss' as *;
 
-    div.wrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+header {
+    background-color: $light-color;
 
     div.main-logo img {
         width: 60px;
         padding: .8rem 0;
     }
 
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 90px;
+    }
+
     ul {
         list-style-type: none;
+        display: flex;
+        height: 100%;
 
         li {
-            display: inline;
-            padding: 2.1rem 0;
+            display: inline-block;
             margin: 0 .7rem;
             font-size: .65rem;
+            line-height: 90px;
             font-weight: bold;
 
             &.active {
-                color: #267CEC;
-                border-bottom: 4px solid #267CEC;
+                color: $main-color;
+                border-bottom: 4px solid $main-color;
             }
         }
     }

@@ -13,15 +13,9 @@ export default {
 </script>
 
 <template>
-  <header>
-    <AppHeader />
-  </header>
-  <main>
-    <AppMain />
-  </main>
-  <footer>
-    <AppFooter />
-  </footer>
+  <AppHeader />
+  <AppMain />
+  <AppFooter />
 </template>
 
 <style lang="scss">
